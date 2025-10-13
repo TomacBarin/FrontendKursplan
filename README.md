@@ -13,6 +13,8 @@ Denna hemsida demonstrera kursplanen för Frontendutveckling
 
 ### Färgpalett
 
+Notis.
+
 Primär #4C65FF
 
 TEMPORÄRA:
