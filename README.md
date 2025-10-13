@@ -16,9 +16,9 @@ Vi vill pusha oss själva till att skapa vår mest robusta och visuellt tilltala
 
 ## Roller
 
-Pontus: Scrumm master
-Marcus: Design
-Tomac: ReadMe, Projektägare, utvecklare
+- Pontus: Scrumm master
+- Marcus: Design
+- Tomac: ReadMe, Projektägare, utvecklare
 
 ## Deadline
 
