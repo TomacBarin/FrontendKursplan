@@ -1,3 +1,32 @@
 body {
-    font-family: Cabin, 'Cabin Condensed';
+  font-family: Cabin, "Cabin Condensed";
+}
+
+.welcomeSection {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.welcomeContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  height: 100vh;
+  flex-wrap: wrap;
+}
+
+.welcomeImage {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.welcomeItalic {
+  font-style: italic;
+}
+
+.welcomeText {
+  width: 300px;
 }
