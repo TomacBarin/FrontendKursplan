@@ -12,4 +12,4 @@ btn.addEventListener("click", alertFunction);
 const img = document.createElement("img");
 img.src = "./assets/Bilder/Bildpamig.jpg";
 img.alt = "Drilon Shehu";
-img.classList.add("footer");bild;
+img.classList.add("footer");
