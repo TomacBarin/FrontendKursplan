@@ -5,23 +5,19 @@
     --primary-text-color: #EEEEEE;   
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Cabin, 'Cabin Condensed';
 }
 
-/* .navcontainer {
-    display: flex;
-    flex-direction: column;
-    background-color: var(--second-bg-color);
-    width: 500px;
-    height: 100vh;
-} */
-
 .menu {
     position: fixed;
     top: 0;
-    left: -250px; /* utanför skärmen */
-    width: 250px;
+    left: -350px; 
+    width: 350px;
     height: 100%;
     background-color: #2D2D2D;
     padding-top: 60px;
@@ -42,7 +38,7 @@ body {
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: var(--primary-text-color);
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -65,15 +61,32 @@ body {
 
 .links {
     list-style: none;
-    padding: 20px;
+    padding: 10px;
 }
 
-a:link {
+.links li a {
     text-decoration: none;
-    color: var(--primary-text-color)
+    color: var(--primary-text-color);
 }
 
-a:visited {
+.links li a:visited,
+.links li a:hover,
+.links li a:active,
+.links li a:focus {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.head {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.head:visited,
+.head:hover,
+.head:active,
+.head:focus {
+    color: var(--primary-text-color);
     text-decoration: none;
 }
 
