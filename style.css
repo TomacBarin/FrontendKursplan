@@ -23,8 +23,14 @@ html {
 }
 
 body {
-    font-family: Cabin, 'Cabin Condensed';
+  font-family: Cabin, "Cabin Condensed";
+}
 
+#pontusbild {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .title-description {
