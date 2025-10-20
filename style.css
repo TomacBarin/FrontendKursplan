@@ -1,10 +1,25 @@
 body {
-    font-family: Cabin, 'Cabin Condensed';
+  font-family: Cabin, "Cabin Condensed";
 }
 
 #pontusbild {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
+
+/* Grid Grades - Tomac */
+
+.containerGrades {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 10px 10px;
+}
+
+.itemGrades {
+  background-color: red;
+}
+
+/* Flexbox Grades - Tomac */
