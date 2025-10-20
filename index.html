@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend kursplan</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,8 +11,35 @@
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==">
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
-<body class="flex-center">
-
+<body>
+<header>
+       <nav>
+            <div class="menuicon" id="menuicon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="menu" id="menu">
+                <ul class="links" id="links">
+                    <a class="head"href="#lärandemål">Lärandemål</a>
+                    <li><a href="#kunskaper">Kunskaper</a></li>
+                    <li><a href="#färdigheter">Färdigheter</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#">Kunskapskontroll</a>
+                    <li><a href="#">Summativ bedömning</a></li>
+                    <li><a href="#">Formativ bedöming</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#grades">Bedömning och kriterier</a>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#peda">Pedagogiskt stöd och komplettering</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="flex-center">
     <div class="container section-description">
         <h3 class="title-description">
             KURSPLAN
@@ -35,44 +62,70 @@
             
         </div>
 
-        <div class="container-fullwidth">
+        <div class="container-fullwidth" id="lärandemål">
             <div class="section-title">
                 <h2>Lärandemål</h2>
                 <p>Vid avslutad kurs med godkända resultat, kan den studerande:</p>
                 <a href="#next-section" class="scroll-arrow">&#x2193;</a>
             </div>
         </div>
+    <section id="grades">
+      <!-- Grid med två rader och en kolumn vardera -->
+      <div class="containerGrades">
+        <div class="itemGrades">
+          <!-- Grid 1 -->
+      
+          <!-- Flexbox: Tre betyg-->
+          <div class="flexGrades">
+            <!-- GradeBox One: VG + Image and text -->
+            <div>
+              <div class="boxGrades boxGrade1">VG</div>
+              <p class="paraGrades gradeTextBold">Väl godkänt (VG):</p>
 
-<body>
-    <header>
-       <nav class="navcontainer">
-            <div class="menuicon" id="menuicon">
-                <span class="bar1"></span>
-                <span class="bar2"></span>
-                <span class="bar3"></span>
+              <p class="paraGrades">
+                Alla lärandemål är uppfyllda på en tillfredsställande nivå.
+              </p>
+
             </div>
-            <div class="menu" id="menu">
-                <ul class="links" id="links">
-                    <a class="head" href="#">Lärandemål</a>
-                    <li><a href="#kunskaper">Kunskaper</a></li>
-                    <li><a href="#färdigheter">Färdigheter</a></li>
-                </ul>
-                <ul class="links" id="links">
-                    <a class="head" href="#">Kunskapskontroll</a>
-                    <li><a href="#">Summativ bedömning</a></li>
-                    <li><a href="#">Formativ bedöming</a></li>
-                </ul>
-                <ul class="links" id="links">
-                    <a class="head" href="#">Bedömning och kriterier</a>
-                </ul>
-                <ul class="links" id="links">
-                    <a class="head" href="#pedagogiskt">Pedagogiskt stöd och komplettering</a>
-                </ul>
+            <!-- GradeBox One: G + Image and text -->
+            <div>
+              <div class="boxGrades boxGrade2">G</div>
+              <p class="paraGrades gradeTextBold">Godkänt (G):</p>
+              <p class="paraGrades">
+                Alla lärandemål är uppfyllda på en tillfredsställande nivå.
+              </p>
             </div>
-        </nav>
-    </header>
-    <section class="pedagogik">
-        <h2 id="#pedagogiskt">Rätt till särskilt pedagogiskt stöd och komplettering</h2>
+            <!-- GradeBox One: IG + Image and text -->
+            <div>
+              <div class="boxGrades boxGrade3">IG</div>
+              <p class="paraGrades gradeTextBold">
+                Icke godkänt (IG):</p> <p class="paraGrades">Alla lärandemål är inte uppfyllda.</p>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="itemGrades">
+          <!-- Grid 2 -->
+           <h2 class="h2Grades">Nota Bene: För betyget VG krävs att den sturerande uppvisar</h2>
+                        <ul class="gradesList">
+                <li class="paraGrades">
+                  Hög precision i utförande av enklare DOM-manipulation med
+                  JavaScript.
+                </li>
+                <li class="paraGrades">
+                  Stor skicklighet vid skapande av interaktiva webbapplikationer
+                  med JavaScript och DOM-manipulation.
+                </li>
+                <li class="paraGrades">
+                  Hög precision och korrekthet vid integrering av API:er för att
+                  visa och manipulera data i webbapplikationer.
+                </li>
+              </ul>
+        </div>
+      </div>
+    </section>
+    <section class="pedagogik" id="peda">
+        <h2>Rätt till särskilt pedagogiskt stöd och komplettering</h2>
         <p><strong>Vid behov av särskilt pedagogiskt stöd kan följande anpassningar göras vid uppvisande av intyg:</strong></p>
         <ul>
             <li>Förlängd tid vid examinationstillfället.</li>
@@ -89,6 +142,7 @@
     <img class="footer-bild" id="footerbild" src="./assets/Bilder/Bildpamig.jpg" alt="Drilon Shehu">
     <img id="pontusbild" src="assets/pontus_Fixed.jpg" alt="En svart/vit bild på en katt med solglasögon">
     </footer>
+    </div>
 <script src="pontus.js"></script>
 </body>
 </html>
