@@ -2,7 +2,7 @@
     --primary-color: #4C65FF;
     --primary-bg-color: #141414;
     --second-bg-color: #2D2D2D;
-    --primary-text-color: #EEEEEE;   
+    --primary-text-color: #bbb7b7;   
 }
 
 html {
@@ -54,7 +54,7 @@ body {
     left: -350px; 
     width: 350px;
     height: 100%;
-    background-color: #2D2D2D;
+    background-color: var(--second-bg-color);
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -68,11 +68,16 @@ body {
 .links li a {
     text-decoration: none;
     color: var(--primary-text-color);
-    padding: 10px;
+    padding: 12px;
+    transition: color 0.3s ease;
+}
+
+.links li a:hover {
+    color: #fff;
+    transform: scale(1.1)
 }
 
 .links li a:visited,
-.links li a:hover,
 .links li a:active,
 .links li a:focus {
   color: var(--primary-text-color);
@@ -84,8 +89,12 @@ body {
     text-decoration: none;
 }
 
+.head a:hover {
+    color: #fff;
+    transition: scale(1.1);
+}
+
 .head:visited,
-.head:hover,
 .head:active,
 .head:focus {
     color: var(--primary-text-color);
