@@ -68,6 +68,7 @@ body {
 .links li a {
     text-decoration: none;
     color: var(--primary-text-color);
+    padding: 10px;
 }
 
 .links li a:visited,
