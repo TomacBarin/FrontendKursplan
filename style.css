@@ -30,3 +30,9 @@ body {
 .welcomeText {
   width: 300px;
 }
+
+@media (max-width: 600px) {
+  .welcomeContainer {
+    flex-direction: column;
+  }
+}
