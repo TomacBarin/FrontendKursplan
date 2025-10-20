@@ -91,6 +91,12 @@ body {
     text-decoration: none;
 }
 
+.pedagogik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #pontusbild {
     height: 100px;
     width: 100px;
@@ -98,8 +104,9 @@ body {
     object-fit: cover;
 }
 
-.pedagogik {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.footer-bild {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
