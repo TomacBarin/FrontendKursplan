@@ -4,15 +4,71 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontend kursplan</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+       <nav>
+            <div class="menuicon" id="menuicon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <div class="menu" id="menu">
+                <ul class="links" id="links">
+                    <a class="head" href="#">Lärandemål</a>
+                    <li><a href="#kunskaper">Kunskaper</a></li>
+                    <li><a href="#färdigheter">Färdigheter</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#">Kunskapskontroll</a>
+                    <li><a href="#">Summativ bedömning</a></li>
+                    <li><a href="#">Formativ bedöming</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#">Bedömning och kriterier</a>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#pedagogiskt">Pedagogiskt stöd och komplettering</a>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="flex-center">
+    <div class="container section-description">
+        <h3 class="title-description">
+            KURSPLAN
+        </h3>
+        <h2 class="title-heading">FRONTENDUTVECKLING</h1>
+            <p>Denna kurs fokuserar på frontendutveckling med JavaScript, inklusive skapandet av dynamiska och interaktiva
+                webbapplikationer. Studerande lär sig att hantera DOM, integrera API:er och implementera
+                tillgänglighetsanpassningar enligt WCAG. Kursen täcker också grundläggande UX/UI-principer,
+                prestandaoptimering och säkerhet för att skapa användarvänliga och effektiva gränssnitt. Efter en inledande
+                inlärningsfas genomför studerande projekt där de praktiserar sina färdigheter i en arbetsliknande miljö.
+            </p>
+            <div class="description-boxes">
+                <div class="description-box">Valbar kurs: Nej</div>
+                <div class="description-box">YH-Poäng: 60</div>
+                <div class="description-box">Undervisningsspråk: Svenska, delvis Engelska</div>
+                <div class="description-box">Utbildningsnamn: Fullstackutvecklare JavaScript</div>
+                <div class="description-box">Utbildningsnummer: YH02029</div>
+                <div class="description-box">Omgång: 3</div>
+            </div>
+            
+        </div>
+
+        <div class="container-fullwidth">
+            <div class="section-title">
+                <h2>Lärandemål</h2>
+                <p>Vid avslutad kurs med godkända resultat, kan den studerande:</p>
+                <a href="#next-section" class="scroll-arrow">&#x2193;</a>
+            </div>
+        </div>
     <section id="grades">
       <!-- Grid med två rader och en kolumn vardera -->
       <div class="containerGrades">
@@ -68,14 +124,25 @@
         </div>
       </div>
     </section>
+    <section class="pedagogik">
+        <h2 id="#pedagogiskt">Rätt till särskilt pedagogiskt stöd och komplettering</h2>
+        <p><strong>Vid behov av särskilt pedagogiskt stöd kan följande anpassningar göras vid uppvisande av intyg:</strong></p>
+        <ul>
+            <li>Förlängd tid vid examinationstillfället.</li>
+            <li>Alternativa examinationsformer, exempelvis skriftliga istället för muntliga moment.</li>
+            <li>Utökat stöd för att underlätta inlärningen.</li>
+        </ul>
+        <p><strong>Komplettering och omprov:</p></strong>
+        <ul>
+            <li>Studerande har rätt till en (1) omexamination inom sex (6) månader från det ordinarie examinationstillfället.<br>Tid och form fastställs av utbildningsanordnaren och utbildaren och meddelas till studerande, som förväntas följa dessa beslut.</br></li>
+            <li>Om omprovet inte genomförs eller inte godkänns, kan inget betyg sättas i kursen. <br>Studerande kan dock fortsätta med efterföljande kurser, förutsatt att den missade kursen inte utgör ett förkunskapskrav för dessa.</br></li>
+        </ul>
+    </section>
     <footer>
-      <img
-        id="pontusbild"
-        src="assets/pontus_Fixed.jpg"
-        alt="En svart/vit bild
-      på en katt med solglasögon"
-      />
+    <img class="footer-bild" id="footerbild" src="./assets/Bilder/Bildpamig.jpg" alt="Drilon Shehu">
+    <img id="pontusbild" src="assets/pontus_Fixed.jpg" alt="En svart/vit bild på en katt med solglasögon">
     </footer>
-    <script src="pontus.js"></script>
-  </body>
+    </div>
+<script src="pontus.js"></script>
+</body>
 </html>
