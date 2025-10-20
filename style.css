@@ -11,6 +11,11 @@
 
     --top-bottom-padding: 1rem;
     --button-br: .5rem;
+:root {
+    --primary-color: #4C65FF;
+    --primary-bg-color: #141414;
+    --second-bg-color: #2D2D2D;
+    --primary-text-color: #EEEEEE;   
 }
 
 html {
@@ -180,6 +185,91 @@ body {
     align-items: center;
 }
 
+.menuicon {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    position: fixed;
+    z-index: 1001;
+}
+
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 2px;
+    background-color: var(--primary-text-color);
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+.menu.open{
+    left: 0;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -350px; 
+    width: 350px;
+    height: 100%;
+    background-color: #2D2D2D;
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.links {
+    list-style: none;
+    padding: 10px;
+}
+
+.links li a {
+    text-decoration: none;
+    color: var(--primary-text-color);
+    padding: 10px;
+}
+
+.links li a:visited,
+.links li a:hover,
+.links li a:active,
+.links li a:focus {
+  color: var(--primary-text-color);
+  text-decoration: none;
+}
+
+.head {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.head:visited,
+.head:hover,
+.head:active,
+.head:focus {
+    color: var(--primary-text-color);
+    text-decoration: none;
+}
+
+.pedagogik {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #pontusbild {
     height: 100px;
     width: 100px;
@@ -203,4 +293,9 @@ body {
   .description-box {
     margin-bottom: .5rem;
   }
+.footer-bild {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
 }
