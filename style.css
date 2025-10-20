@@ -14,12 +14,15 @@ body {
 .containerGrades {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: auto;
   gap: 10px 10px;
 }
 
 .itemGrades {
-  background-color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Flexbox Grades - Tomac */
@@ -27,14 +30,22 @@ body {
 .flexGrades {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: normal;
   flex-direction: row;
   flex-wrap: wrap;
   gap: 20px;
 }
 
+.flexGrades > div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .boxGrades {
-  background-color: green;
+  color: #d3d3d3;
+  background-color: #353535;
   height: 200px;
   width: 200px;
   display: flex;
@@ -46,14 +57,40 @@ body {
 }
 
 .paraGrades {
-  color: blue;
   width: 200px;
   line-height: 1.4;
 }
 
-.gradeTextBold {
-  font-weight: bold;
+.h2Grades {
+  text-align: center;
 }
 
-.boxGrade1 {
+.gradeTextBold {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gradesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.gradesList li {
+  text-align: left;
+  width: 350px;
+}
+
+/* .boxGrade1 {
+} */
+
+@media (max-width: 700px) {
+  .flexGrades {
+    flex-direction: column;
+    align-items: center;
+  }
 }
