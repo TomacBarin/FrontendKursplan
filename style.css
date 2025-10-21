@@ -25,3 +25,33 @@ footer img {
     border-radius: 50%;
     object-fit: cover;
 }
+
+
+
+/*Här är sektion*/
+.stod-section {
+    background-color: var(--background-color);
+    max-width: 800px;
+    margin: 40px auto;
+    color: var(--text-color);
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stod-section h2 {
+    font-size: 28px;
+    margin-top: 0;
+    color:#222
+}
+
+.stod-section h3 {
+    font-size: 22px;
+    margin-top: 20px;
+    color:#444
+}
+
+.stod-section ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
