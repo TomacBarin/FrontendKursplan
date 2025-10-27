@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
@@ -21,6 +21,7 @@
     --primary-text-color: #939090;   
 
     --min-breakpoint: 768px;
+
 }
 
 .darkmode {
@@ -51,7 +52,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -66,20 +67,32 @@ body {
   border-radius: 50%;
   object-fit: cover;
 }
+
 .title-description {
-    color: var(--primary-color);
-    font-size: 1.2rem;
-    font-weight: 600;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
 .title-heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 10px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .section-title {
-
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--color-white);
+  }
+  p {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--color-white);
+  }
+  
   transition: transform .5s ease;
 
     h2 {
@@ -96,14 +109,16 @@ body {
 }
 
 .container {
-    margin-top: var(--top-bottom-padding);
-    margin-bottom: var(--top-bottom-padding);
-    padding: 2rem;
+  margin-top: var(--top-bottom-padding);
+  margin-bottom: var(--top-bottom-padding);
+  padding: 2rem;
 
     width: var(--min-breakpoint);
 }
 
 .container-fullwidth {
+  width: 100vw;
+  height: 100vh;
   height: 14rem;
   min-width: 768px;
   width: 100vw;
@@ -112,6 +127,23 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-image: url("assets/title-test.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+  
   position: relative;
   overflow: hidden;
   background-image: url('/assets/title-test.jpg');
@@ -186,30 +218,38 @@ body {
 }
 
 .container-fullwidth::before {
-    
-    content: "";
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    backdrop-filter: blur(3px);
-    z-index: 1;
-
+  content: "";
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
 }
 
 .description-boxes {
-    margin-top: 1.2rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    gap: .5rem;
-    justify-content: start;
-    grid-auto-columns: auto;
-    grid-auto-flow: row;
+  margin-top: 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 0.5rem;
+  justify-content: start;
+  grid-auto-columns: auto;
+  grid-auto-flow: row;
 }
 
-
 .description-box {
+  background-color: var(--box-color);
+  border-radius: var(--button-br);
+  padding: 1rem;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
     background-color: var(--box-color);
     border-radius: var(--button-br);
     padding: 1rem;
@@ -227,7 +267,8 @@ body {
 
 .description-box:hover {
   background-color: color-mix(in srgb, var(--box-color) 90%, white);
-  
+
+  transition: background-color 0.2s ease;
 }
 
 .description-box:nth-child(1) {
@@ -258,33 +299,35 @@ body {
 
 /* UTILITY */
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .flex-center {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 /* nav menu  */
 .menuicon {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    margin-left: 1rem;
-    margin-top: 1rem;
-    position: fixed;
-    z-index: 1001;
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  position: fixed;
+  z-index: 1001;
 }
 
 /* Hamburger ikon menu */
-.bar1, .bar2, .bar3 {
-    width: 30px;
-    height: 2px;
-    background-color: black;
-    margin: 4px 0;
-    transition: 0.4s;
+.bar1,
+.bar2,
+.bar3 {
+  width: 30px;
+  height: 2px;
+  background-color: black;
+  margin: 4px 0;
+  transition: 0.4s;
 }
 
 .change .bar1 {
@@ -299,42 +342,84 @@ body {
   transform: translate(0, -11px) rotate(45deg);
 }
 
-.menu.open{
-    left: 0;
+.menu.open {
+  left: 0;
 }
 
 .menu {
+
+  position: fixed;
+  top: 0;
+  left: -350px;
+  width: 350px;
+  height: 100%;
+  background-color: var(--primary-color);
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 1000;
     position: fixed;
     top: 0;
     left: -350px; 
     width: 350px;
-    height: 100%;
+    height: 100vh;
     background-color: var(--second-bg-color);
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
+
 }
 
 .links {
-    list-style: none;
-    padding: 10px;
+  list-style: none;
+  padding: 10px;
 }
 
 .links a {
-    text-decoration: none;
-    color: var(--primary-text-color);
-    padding: 12px;
-    transition: color 0.3s ease;
-    display: inline-block;
+  text-decoration: none;
+  color: var(--primary-text-color);
+  padding: 12px;
+  transition: color 0.3s ease;
+  display: inline-block;
 }
 
 .links a:hover {
-    color: white;
-    transform: scale(1.1)
+  color: white;
+  transform: scale(1.1);
 }
 
 .head {
-    font-size: 19px;
+  font-size: 19px;
+}
+
+/* Kunskapsgontrol - Tomac */
+
+.content-wrapper {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.contrContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.contrBox {
+  color: var(--color-white);
+  background-color: var(--box-color);
+  margin: 7px;
+  padding: 10px;
+  list-style-type: none;
+  border-radius: 5px;
+}
+
+.margBelow {
+  margin-bottom: 25px;
 }
 
 /* Grid Grades - Tomac */
@@ -424,24 +509,24 @@ body {
 }
 
 .pedagogik {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
 }
 
 #pontusbild {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .footer-bild {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 footer {
@@ -479,7 +564,7 @@ footer {
   }
 
   .description-box {
-    margin-bottom: .5rem;
+    margin-bottom: 0.5rem;
   }
 }
 
@@ -524,5 +609,70 @@ footer {
   .menuicon {
     position: fixed;
     z-index: 1002;
+  }
+}
+
+
+/* Drilon CSS */
+
+#färdigheter {
+  position: relative;
+  background-color: var(--second-bg-color);
+  padding: 4rem 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+#färdigheter .section-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#färdigheter .section-title h2 {
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+#färdigheter .section-title p {
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+.skills-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.skills-container .description-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.skills-container .description-box {
+  background-color: var(--box-color);
+  border-radius: var(--button-br);
+  padding: 1rem;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.skills-container .description-box:hover {
+  background-color: color-mix(in srgb, var(--box-color) 85%, white);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  #färdigheter {
+    padding: 3rem 1rem;
+  }
+  #färdigheter .section-title h2 {
+    font-size: 2rem;
+  }
+  .skills-container .description-boxes {
+    display: block;
+  }
+  .skills-container .description-box {
+    margin-bottom: 1rem;
   }
 }
