@@ -128,21 +128,9 @@ body {
   justify-content: center;
   align-items: center;
   background-image: url("assets/title-test.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
 
-  .section-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    color: var(--color-white);
-    position: relative;
-    z-index: 2;
-    max-width: 600px;
-  }
+
+
   
   position: relative;
   overflow: hidden;
