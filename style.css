@@ -70,7 +70,7 @@ body {
 }
 
 .container-fullwidth {
-  height: 100vh;
+  height: 25rem;
   width: 100vw;
   padding: 2rem;
   display: flex;
@@ -109,11 +109,11 @@ body {
 
 @keyframes parallax {
   from {
-    background-position: center -200px;
+    background-position: center -100px;
 
   }
   to {
-    background-position: center 200px;
+    background-position: center 50px;
   }
 }
 
