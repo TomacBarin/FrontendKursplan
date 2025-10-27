@@ -16,6 +16,8 @@
     --primary-bg-color: #141414;
     --second-bg-color: #2D2D2D;
     --primary-text-color: #939090;   
+
+    --min-breakpoint: 768px;
 }
 
 html {
@@ -394,7 +396,7 @@ body {
 /* .boxGrade1 {
 } */
 
-@media (max-width: 700px) {
+@media (max-width: var(--min-breakpoint)) {
   .flexGrades {
     flex-direction: column;
     align-items: center;
@@ -422,10 +424,19 @@ body {
     object-fit: cover;
 }
 
+footer {
+    background-color: var(--second-bg-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100vw;
+}
+
 /* .boxGrade1 {
 } */
 
-@media (max-width: 768px) {
+@media (max-width: var(--min-breakpoint)) {
   .flexGrades {
     flex-direction: column;
     align-items: center;
@@ -438,7 +449,7 @@ body {
   60% { transform: translateX(-50%) translateY(-5px); }
 }
 
-@media (max-width: 768px) {
+@media (max-width: var(--min-breakpoint)) {
   .description-boxes {
     display: block;
   }
@@ -448,7 +459,7 @@ body {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: var(--min-breakpoint)) {
   .menu {
     position: fixed;
     top: 0;
