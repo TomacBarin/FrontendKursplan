@@ -11,11 +11,11 @@
 
     --top-bottom-padding: 1rem;
     --button-br: .5rem;
-:root {
+
     --primary-color: #4C65FF;
     --primary-bg-color: #141414;
     --second-bg-color: #2D2D2D;
-    --primary-text-color: #EEEEEE;   
+    --primary-text-color: #939090;   
 }
 
 html {
@@ -23,9 +23,9 @@ html {
 }
 
 body {
-    font-family: Cabin, 'Cabin Condensed';
-
+  font-family: Cabin, "Cabin Condensed";
 }
+
 
 .title-description {
     color: var(--primary-color);
@@ -184,7 +184,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-
+/* nav menu  */
 .menuicon {
     display: flex;
     flex-direction: column;
@@ -195,11 +195,11 @@ body {
     z-index: 1001;
 }
 
-
+/* Hamburger ikon menu */
 .bar1, .bar2, .bar3 {
     width: 30px;
     height: 2px;
-    background-color: var(--primary-text-color);
+    background-color: black;
     margin: 4px 0;
     transition: 0.4s;
 }
@@ -226,7 +226,7 @@ body {
     left: -350px; 
     width: 350px;
     height: 100%;
-    background-color: #2D2D2D;
+    background-color: var(--primary-color);
     padding-top: 60px;
     transition: left 0.3s ease;
     z-index: 1000;
@@ -237,40 +237,124 @@ body {
     padding: 10px;
 }
 
-.links li a {
+.links a {
     text-decoration: none;
     color: var(--primary-text-color);
-    padding: 10px;
+    padding: 12px;
+    transition: color 0.3s ease;
+    display: inline-block;
 }
 
-.links li a:visited,
-.links li a:hover,
-.links li a:active,
-.links li a:focus {
-  color: var(--primary-text-color);
-  text-decoration: none;
+.links a:hover {
+    color: white;
+    transform: scale(1.1)
 }
 
 .head {
-    font-size: 20px;
-    text-decoration: none;
+    font-size: 19px;
 }
 
-.head:visited,
-.head:hover,
-.head:active,
-.head:focus {
-    color: var(--primary-text-color);
-    text-decoration: none;
+/* Grid Grades - Tomac */
+
+.containerGrades {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  gap: 10px 10px;
+}
+
+.itemGrades {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Flexbox Grades - Tomac */
+
+.flexGrades {
+  display: flex;
+  justify-content: center;
+  align-items: normal;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.flexGrades > div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.boxGrades {
+  color: #d3d3d3;
+  background-color: #353535;
+  height: 200px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.paraGrades {
+  width: 200px;
+  line-height: 1.4;
+}
+
+.h2Grades {
+  text-align: center;
+}
+
+.gradeTextBold {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.gradesList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  list-style-position: inside;
+}
+
+.gradesList li {
+  text-align: left;
+  width: 350px;
+}
+
+/* .boxGrade1 {
+} */
+
+@media (max-width: 700px) {
+  .flexGrades {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .pedagogik {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 40px;
 }
 
 #pontusbild {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.footer-bild {
     height: 100px;
     width: 100px;
     border-radius: 50%;
@@ -293,9 +377,4 @@ body {
   .description-box {
     margin-bottom: .5rem;
   }
-.footer-bild {
-    height: 100px;
-    width: 100px;
-    border-radius: 50%;
-    object-fit: cover;
 }
