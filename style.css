@@ -390,6 +390,15 @@ body {
   width: 350px;
 }
 
+footer {
+  width: 100vw;
+  background-color: var(--second-bg-color);
+  color: var(--color-white);
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
 /* .boxGrade1 {
 } */
 
