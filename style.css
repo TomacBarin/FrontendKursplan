@@ -288,7 +288,7 @@ body {
     top: 0;
     left: -350px; 
     width: 350px;
-    height: 100%;
+    height: 100vh;
     background-color: var(--second-bg-color);
     padding-top: 60px;
     transition: left 0.3s ease;
@@ -500,5 +500,70 @@ footer {
   .menuicon {
     position: fixed;
     z-index: 1002;
+  }
+}
+
+
+/* Drilon CSS */
+
+#färdigheter {
+  position: relative;
+  background-color: var(--second-bg-color);
+  padding: 4rem 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+#färdigheter .section-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#färdigheter .section-title h2 {
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+#färdigheter .section-title p {
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+.skills-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.skills-container .description-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.skills-container .description-box {
+  background-color: var(--box-color);
+  border-radius: var(--button-br);
+  padding: 1rem;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.skills-container .description-box:hover {
+  background-color: color-mix(in srgb, var(--box-color) 85%, white);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  #färdigheter {
+    padding: 3rem 1rem;
+  }
+  #färdigheter .section-title h2 {
+    font-size: 2rem;
+  }
+  .skills-container .description-boxes {
+    display: block;
+  }
+  .skills-container .description-box {
+    margin-bottom: 1rem;
   }
 }
