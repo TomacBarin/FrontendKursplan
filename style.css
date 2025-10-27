@@ -446,8 +446,8 @@ body {
 .boxGrades {
   color: #d3d3d3;
   background-color: #353535;
-  height: 200px;
-  width: 200px;
+
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -457,7 +457,7 @@ body {
 }
 
 .paraGrades {
-  width: 200px;
+
   line-height: 1.4;
 }
 
@@ -474,7 +474,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 600px;
+  max-width: 768px;
   margin: 0 auto;
   padding: 0;
   list-style-position: inside;
@@ -482,7 +482,7 @@ body {
 
 .gradesList li {
   text-align: left;
-  width: 350px;
+  
 }
 
 /* .boxGrade1 {
@@ -605,7 +605,7 @@ footer {
 #färdigheter {
   position: relative;
   background-color: var(--color-bg);
-  padding: 4rem 2rem;
+
   color: var(--color-white);
   text-align: center;
 }
@@ -627,7 +627,6 @@ footer {
 .skills-container {
   position: relative;
   z-index: 2;
-  max-width: 1000px;
   margin: 0 auto;
   padding: 1rem;
 }
