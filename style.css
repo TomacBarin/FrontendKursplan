@@ -46,6 +46,8 @@ body {
 
 .section-title {
 
+  transition: transform .5s ease;
+
     h2 {
         font-size: 2.5rem;
         font-weight: 700;
@@ -112,7 +114,6 @@ body {
   }
   to {
     background-position: center 200px;
-
   }
 }
 
