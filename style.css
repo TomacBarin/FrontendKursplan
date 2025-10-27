@@ -16,6 +16,14 @@
   --primary-bg-color: #141414;
   --second-bg-color: #2d2d2d;
   --primary-text-color: #939090;
+
+    --primary-color: #4C65FF;
+    --primary-bg-color: #141414;
+    --second-bg-color: #2D2D2D;
+    --primary-text-color: #939090;   
+
+    --min-breakpoint: 768px;
+
 }
 
 html {
@@ -24,6 +32,13 @@ html {
 
 body {
   font-family: Cabin, "Cabin Condensed";
+}
+
+.tomacRound {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 .title-description {
@@ -50,6 +65,20 @@ body {
     font-weight: 500;
     color: var(--color-white);
   }
+  
+  transition: transform .5s ease;
+
+    h2 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: var(--color-white);
+    }
+    p {
+        margin-top: .4rem;
+        font-size: 1rem;
+        font-weight: 500;
+        color: var(--color-white);
+    }
 }
 
 .container {
@@ -63,14 +92,15 @@ body {
 .container-fullwidth {
   width: 100vw;
   height: 100vh;
+  height: 14rem;
+  min-width: 768px;
+  width: 100vw;
   padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   background-image: url("assets/title-test.jpg");
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -86,6 +116,78 @@ body {
     z-index: 2;
     max-width: 600px;
   }
+  
+  position: relative;
+  overflow: hidden;
+  background-image: url('/assets/title-test.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  view-timeline-name: --parallax;
+  view-timeline-axis: block;
+
+  animation-timeline: --parallax;
+  animation-name: parallax;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+  animation-range: entry 0% exit 100%;
+        
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-white);
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        
+    }
+}
+
+@keyframes parallax {
+  from {
+    background-position: center -200px;
+
+  }
+  to {
+    background-position: center 50px;
+  }
+}
+
+.container-hero {
+    width: 100vw;
+    height: 14rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary-color);
+    transition: background-color .5s ease;
+        
+    .section-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: var(--color-white);
+        position: relative;
+        z-index: 2;
+        max-width: 600px;
+        
+    }
+}
+
+.container-hero:hover {
+  background-color: color-mix(in srgb, var(--primary-color) 90%, white);
+}
+
+.container-hero:hover .section-title {
+  transform: scale(1.015);    
 }
 
 .container-fullwidth::before {
@@ -121,10 +223,24 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+    background-color: var(--box-color);
+    border-radius: var(--button-br);
+    padding: 1rem;
+    color: white;
+    font-size: .8rem;
+    font-weight: 600;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    transition: background-color .2s ease;
 }
 
 .description-box:hover {
   background-color: color-mix(in srgb, var(--box-color) 90%, white);
+
   transition: background-color 0.2s ease;
 }
 
@@ -216,6 +332,7 @@ body {
 }
 
 .menu {
+
   position: fixed;
   top: 0;
   left: -350px;
@@ -225,6 +342,16 @@ body {
   padding-top: 60px;
   transition: left 0.3s ease;
   z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: -350px; 
+    width: 350px;
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    padding-top: 60px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+
 }
 
 .links {
@@ -359,7 +486,7 @@ body {
 /* .boxGrade1 {
 } */
 
-@media (max-width: 700px) {
+@media (max-width: var(--min-breakpoint)) {
   .flexGrades {
     flex-direction: column;
     align-items: center;
@@ -387,6 +514,25 @@ body {
   object-fit: cover;
 }
 
+footer {
+    background-color: var(--second-bg-color);
+    color: var(--primary-text-color);
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    width: 100vw;
+}
+
+/* .boxGrade1 {
+} */
+
+@media (max-width: var(--min-breakpoint)) {
+  .flexGrades {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 @keyframes bounce {
   0%,
   20%,
@@ -403,14 +549,121 @@ body {
   }
 }
 
-/* MEDIA QUERIES */
-
-@media (max-width: 768px) {
+@media (max-width: var(--min-breakpoint)) {
   .description-boxes {
     display: block;
   }
 
   .description-box {
     margin-bottom: 0.5rem;
+  }
+}
+
+@media (max-width: var(--min-breakpoint)) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: -100%; 
+    width: 100vw; 
+    height: 100vh;
+    background-color: var(--second-bg-color);
+    padding-top: 100px;
+    transition: left 0.3s ease;
+    z-index: 1000;
+  }
+
+  .menu.open {
+    left: 0;
+  }
+
+  .links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+ 
+  .links a {
+    color: var(--primary-text-color);
+    font-size: 1rem;
+    text-decoration: none;
+    transition: transform 0.2s ease;
+  }
+
+  .links a:hover {
+    transform: scale(1.2);
+    color: var(--color-white);
+  }
+
+  .menuicon {
+    position: fixed;
+    z-index: 1002;
+  }
+}
+
+
+/* Drilon CSS */
+
+#färdigheter {
+  position: relative;
+  background-color: var(--second-bg-color);
+  padding: 4rem 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+#färdigheter .section-title {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+#färdigheter .section-title h2 {
+  font-size: 2.5rem;
+  color: var(--color-white);
+  margin-bottom: 0.5rem;
+}
+#färdigheter .section-title p {
+  font-size: 1.1rem;
+  color: var(--color-white);
+}
+.skills-container {
+  position: relative;
+  z-index: 2;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+.skills-container .description-boxes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+.skills-container .description-box {
+  background-color: var(--box-color);
+  border-radius: var(--button-br);
+  padding: 1rem;
+  color: var(--color-white);
+  text-align: center;
+  font-weight: 600;
+  transition: background-color 0.2s ease;
+}
+.skills-container .description-box:hover {
+  background-color: color-mix(in srgb, var(--box-color) 85%, white);
+}
+/* MEDIA QUERIES */
+@media (max-width: 768px) {
+  #färdigheter {
+    padding: 3rem 1rem;
+  }
+  #färdigheter .section-title h2 {
+    font-size: 2rem;
+  }
+  .skills-container .description-boxes {
+    display: block;
+  }
+  .skills-container .description-box {
+    margin-bottom: 1rem;
   }
 }
