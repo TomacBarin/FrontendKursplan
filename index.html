@@ -7,42 +7,50 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
-        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
 </head>
 <body>
 <header>
        <nav>
-          <!-- Menu button -->
-          <div class="menuicon" id="menuicon">
-              <span class="bar1"></span>
-              <span class="bar2"></span>
-              <span class="bar3"></span>
+          <div id="menubar">
+            <!-- Menu button -->
+            <div class="menuicon" id="menuicon">
+                <span class="bar1"></span>
+                <span class="bar2"></span>
+                <span class="bar3"></span>
+            </div>
+            <!-- Dark mode button -->
+            <div class="menuicon" id="darkmode-btn">
+              <i class="fa-solid fa-moon"></i>
+            </div>
+            <!-- Side menu -->
+            <div class="menu" id="menu">
+                <ul class="links" id="links">
+                    <a class="head"href="#lärandemål">Lärandemål</a>
+                    <li><a href="#kunskaper">Kunskaper</a></li>
+                    <li><a href="#färdigheter">Färdigheter</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#">Kunskapskontroll</a>
+                    <li><a href="#">Summativ bedömning</a></li>
+                    <li><a href="#">Formativ bedöming</a></li>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#grades">Bedömning och kriterier</a>
+                </ul>
+                <ul class="links" id="links">
+                    <a class="head" href="#peda">Pedagogiskt stöd och komplettering</a>
+                </ul>
+            </div>
           </div>
-          <!-- Dark mode button -->
-          <div class="menuicon" id="darkmode-btn">
-            <i class="fa-solid fa-moon"></i>
+
+          <div class="scroll-up-btn flex-center">
+          <a href="#" class="scroll-arrow">
+            <div class="scroll-up-btn flex-center">
+          <i class="fa-solid fa-arrow-up"></i></a>
           </div>
-          <!-- Side menu -->
-          <div class="menu" id="menu">
-              <ul class="links" id="links">
-                  <a class="head"href="#lärandemål">Lärandemål</a>
-                  <li><a href="#kunskaper">Kunskaper</a></li>
-                  <li><a href="#färdigheter">Färdigheter</a></li>
-              </ul>
-              <ul class="links" id="links">
-                  <a class="head" href="#">Kunskapskontroll</a>
-                  <li><a href="#">Summativ bedömning</a></li>
-                  <li><a href="#">Formativ bedöming</a></li>
-              </ul>
-              <ul class="links" id="links">
-                  <a class="head" href="#grades">Bedömning och kriterier</a>
-              </ul>
-              <ul class="links" id="links">
-                  <a class="head" href="#peda">Pedagogiskt stöd och komplettering</a>
-              </ul>
-          </div>
+        </div>
         </nav>
     </header>
 
