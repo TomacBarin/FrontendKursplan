@@ -26,7 +26,12 @@ body {
   font-family: Cabin, "Cabin Condensed";
 }
 
-
+.tomacRound {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
 .title-description {
     color: var(--primary-color);
     font-size: 1.2rem;
@@ -40,8 +45,6 @@ body {
 }
 
 .section-title {
-
-  transition: transform .5s ease;
 
     h2 {
         font-size: 2.5rem;
@@ -423,15 +426,3 @@ body {
   60% { transform: translateX(-50%) translateY(-5px); }
 }
 
-
-/* MEDIA QUERIES */
-
-@media (max-width: 768px) {
-  .description-boxes {
-    display: block;
-  }
-
-  .description-box {
-    margin-bottom: .5rem;
-  }
-}
