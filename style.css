@@ -32,19 +32,44 @@
     --color-text: #ffffff;
 }
 
+#menubar {
+  /* background-color: aquamarine; */
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  z-index: 9998;
+
+  i {
+    font-size: 1.5rem;
+  }
+  
+}
+
+.menuitem {
+  background-color: var(--scroll-btn-bg-color);
+  
+  height: 3rem;
+  width: 3rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
 .scroll-up-btn {
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 50%;
   z-index: 9998;
   position: fixed;
-  bottom: 20px; /* ändrat från top */
-  right: 20px;  /* kan också använda var(--scroll-btn-margin) */
+  bottom: 1rem;
+  right: 1rem;
   background-color: var(--scroll-btn-bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .scroll-up-btn i {
   color: var(--primary-color); /* eller var(--color-white) */
@@ -300,9 +325,6 @@ body {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  margin-left: 1rem;
-  margin-top: 1rem;
-  position: fixed;
   z-index: 1001;
 }
 
