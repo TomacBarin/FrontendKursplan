@@ -10,6 +10,8 @@
     --color-white: #ffffff;
     --color-bg: #ffffff;
     --scroll-btn-bg-color: #ffffff;
+    --darkmode-btn-bg: #ffffff;
+    --darkmode-btn-color: #000000;
 
     --top-bottom-padding: 1rem;
     --button-br: .5rem;
@@ -30,6 +32,8 @@
     --color-white: #ffffff;
     --color-bg: #141414;
     --color-text: #ffffff;
+    --darkmode-btn-bg: #343636;
+    --darkmode-btn-color: #ffffff;
 }
 
 #menubar {
@@ -38,7 +42,7 @@
   top: 1rem;
   left: 1rem;
   display: flex;
-  gap: 1.5rem;
+  gap: .5rem;
   z-index: 9998;
 
   i {
@@ -48,7 +52,8 @@
 }
 
 .menuitem {
-  background-color: var(--scroll-btn-bg-color);
+  background-color: var(--darkmode-btn-bg);
+  color: var(--darkmode-btn-color);
   
   height: 3rem;
   width: 3rem;
@@ -56,6 +61,8 @@
   align-items: center;
   border-radius: 50%;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+  transition: color .2s linear;
+  transition: background-color .2s linear;
 }
 .scroll-up-btn {
   height: 3.5rem;
@@ -65,14 +72,16 @@
   position: fixed;
   bottom: 1rem;
   right: 1rem;
-  background-color: var(--scroll-btn-bg-color);
+  background-color: var(--darkmode-btn-bg);
+  transition: color .2s linear;
+  transition: background-color .2s linear;
   display: flex;
   justify-content: center;
   align-items: center;
   box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
 }
 .scroll-up-btn i {
-  color: var(--primary-color); /* eller var(--color-white) */
+  color: var(--darkmode-btn-color);
   font-size: 1.5rem;
 }
 
@@ -334,7 +343,7 @@ body {
 .bar3 {
   width: 30px;
   height: 2px;
-  background-color: black;
+  background-color: var(--darkmode-btn-color);
   margin: 4px 0;
   transition: 0.4s;
 }
