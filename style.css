@@ -30,7 +30,8 @@
   --primary-color: #6077ff;
     --box-color: #343636;
     --color-white: #ffffff;
-    --color-bg: #141414;
+    /* --color-bg: #141414; */
+    --color-bg: #1d1d1d;
     --color-text: #ffffff;
     --darkmode-btn-bg: #343636;
     --darkmode-btn-color: #ffffff;
@@ -554,6 +555,13 @@ body {
   width: 100px;
   border-radius: 50%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+  box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.footer-bild:hover {
+  transform: scale(1.05);
+  
 }
 
 footer {

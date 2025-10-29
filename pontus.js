@@ -1,4 +1,5 @@
 const pontusBild = document.getElementById('pontusbild');
+const marcusLink = document.querySelector('.marcusLink');
 const drilonBild = document.querySelector('.footer-bild');
 const navLinks = document.getElementById('menu');
 const menuIkon = document.getElementById('menuicon');
@@ -20,6 +21,11 @@ menuA.forEach(link => {
 pontusBild.addEventListener('dblclick', () => {
     alert('Välkommen till min Github! https://github.com/Awreally ')
     window.open('https://github.com/Awreally', '_blank');
+});
+
+marcusLink.addEventListener('click', () => {
+    alert('Kom och kika på min GitHub vetja! https://github.com/maraccus')
+    window.open('https://github.com/maraccus', '_blank');
 });
 
 drilonBild.addEventListener('dblclick', () => {
