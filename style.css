@@ -450,7 +450,9 @@ body {
 .boxGrades {
   color: #d3d3d3;
   background-color: #353535;
-
+  width: 10rem;
+  height: 10rem;
+  margin-bottom: 1rem;
 
   display: flex;
   justify-content: center;
@@ -463,6 +465,7 @@ body {
 .paraGrades {
 
   line-height: 1.4;
+  margin-bottom: 1rem;
 }
 
 .h2Grades {
