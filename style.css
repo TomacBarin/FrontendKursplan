@@ -34,6 +34,7 @@
     --color-text: #ffffff;
     --darkmode-btn-bg: #343636;
     --darkmode-btn-color: #ffffff;
+    --primary-color: #4351ad;
 }
 
 #menubar {
@@ -689,6 +690,7 @@ footer {
 /* MEDIA QUERIES */
 
 @media (max-width: 768px) {
+
   .menu {
     position: fixed;
     top: 0;
@@ -739,7 +741,7 @@ footer {
   }
 
   .menuicon {
-    position: fixed;
+    /* position: fixed; */
     z-index: 1002;
     top: 1rem;
   }
